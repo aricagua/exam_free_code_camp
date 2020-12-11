@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simon Diaz</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+	<main id="main">
+		<h1 id="title">
+			Simón Díaz
+		</h1>
+		<p>
+			El hombre que dió a Venezuela la mas bellas tonadas
+		</p>
+		<figure id="img-div">
+			<img src="./images/simon.jpg" alt="Tio Simon con cuatro Venezolano" id="image">
+			<figcaption id="img-caption">
+				El Tio Simón con su Cuatro Venezolano.
+			</figcaption>
+		</figure>
+		<section id="tribute-info">
+			<h3 id="secondary-title">
+				Aquí algunos de los logros mas relevantes que hizo en vida.
+			</h3>
+			<ul>
+				<li><strong>1928</strong> Creció en Barbacoas Aragua.</li>
+				<li><strong>1949</strong> Se muda a Caracas y estudia Música.</li>
+				<li><strong>1950</strong> Se da a conocer en toda Venezuela con su programa <i>El llanero</i>.</li>
+				<li><strong>1961</strong> Contrae matrimonio con Betty Garcia.</li>
+				<li><strong>1960</strong> Comienza su carrera televisiva.</li>
+				<li><strong>2000</strong> Es Nominado al premio Grammy Latino.</li>
+				<li><strong>2008</strong> Gana el Grammy Latino por su larga trayectoria.</li>
+
+			</ul>
+			<blockquote cite="https://prodavinci.com/la-entrevista-a-simon-diaz-1928-2014/">
+				<p>
+					"Yo tengo que decir que el Tío, además de enseñarme a ser artista, me enseñó a ser gente. Una de las cosas que me exigió era que siempre debía tener los pies pegados a la tierra porque no éramos más que nadie, pues sólo éramos personajes públicos y más nada."
+				</p>
+				<cite>--Wilmer Machado actor, músico y animador Venezolano</cite>
+			</blockquote>
+			<h3>Si tienes tiempo, puedes pasarte por aquí para aprender acerca de este gran artista Venezolano <a id="tribute-link" target="_blank" href="https://es.wikipedia.org/wiki/Sim%C3%B3n_D%C3%ADaz">Enlace Wikipedia</a>.</h3>
+		</section>
+	</main>
+</body>
+</html>

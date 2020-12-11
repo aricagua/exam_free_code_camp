@@ -1,0 +1,186 @@
+html {
+	/*Configuramos como base 10px para que sea mas facil realizar las medidas rem*/
+	font-size: 10px;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*Comenzamos de andentro hacia afuera las etiquetas primero*/
+
+body {
+
+	/*formateamos el texto desde aquí*/
+	/*primero los tipos de fuente*/
+	font-family: Arial, Helvetica, sans-serif;
+	/*el tamaño que va tener todo el texto en general*/
+	font-size: 1.6rem;
+	/*El interlineado*/
+	line-height: 1.5;
+	/*alineamos los elementos*/
+	text-align: center;
+	color:black;
+	background: #CE9363;
+	/*Aquí se puede volver a formatear el margen pero no se va hacer xq ya lo hicimos en html*/
+}
+
+/*formateamos el titulo principal*/
+
+h1 {
+	/*el tamaño de la fuente*/
+	font-size: 4rem;
+	/*acercamos el contenido del bottom*/
+	margin-bottom: 0;
+}
+
+/*Hacemos el sitio responsive con un media query a 460px*/
+
+@media (max-width: 460px) {
+	h1 {
+		font-size: 3.5rem;
+		line-height: 1.2;
+
+	}
+}
+
+/*formateamos el h2*/
+
+h2 {
+	font-size: 3.25rem;
+}
+
+/*formateamos el color de el enlace*/
+
+a {
+	color: blue;
+}
+
+/*damos estilos cuando se da click encima*/
+
+a:visited {
+	color:red;
+}
+
+/*DE AQUI EN ADELANTE NOS METEMOS CON LAS CLASES DEFINIDAS O LAS ID EMPEZANDO DE AFUERA HACIA DENTRO*/
+
+/*Formateamos el margin*/
+
+#main {
+	margin:30px 8px;
+	/*padding de 15px en todos los lados del contenedor main*/
+	padding: 15px;
+	/*ponemos un border radius*/
+	border-radius: 5px;
+	/*ponemos un color de fondo*/
+	background: #AF703A;
+
+}
+
+
+/*formateamos el main para dispositivos moviles haciendo que ocupe toda la pantalla*/
+
+@media(max-width: 460px) {
+	#main {
+		margin: 0;
+	}
+}
+
+/*damos estilos a la imagen antes del contenedor puesto que el ancho del #img-div depende del contenido*/
+
+img {
+	/*que ocupe toda la pantalla*/
+	max-width: 100%;
+	/*dispaly block para que nada se interponga en un lado*/
+	display: block;
+	height: auto;
+	margin: 0 auto	
+}
+
+/*damos formato a el contenedor de la imagen*/
+#img-div {
+	background: #CE9363;
+	/*configurar el padding*/
+	padding: 10px;
+	margin: 0;
+}
+
+/*damos margen por encima y por debajo para el figcaption*/
+#img-caption {
+	margin: 15px 0 5px 0;
+}
+
+/*hacemos responsive el tamaño de la letra*/
+/*decimos ejecuta este codigo hasta que el ancho maximo sea de 460px*/
+@media (max-width: 460px){
+	#img-caption {
+		font-size: 1.4rem;
+	}
+}
+
+/*damos estilos el segundo titulo del contenido no le ponemos a todo el h3 xq se utiliza en otra parte del index*/
+#secundary-title {
+	margin:50px 0;
+	text-align: center;
+}
+
+/*damos formato al contenedor de la lista desordenada*/
+ul{
+	/*cuanto puede crecer*/
+	max-width: 550px;
+	margin: 0 auto 50px auto;
+	text-align: left;
+	line-height: 1.6;
+}
+
+/*damos formato a las listas*/
+li {
+	margin: 16px 0;
+}
+
+/*damos estilos a elemento donde está la cita*/
+blockquote {
+	font-style: italic;
+	max-width: 545px;
+	margin:0 auto 50px auto;
+	text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
