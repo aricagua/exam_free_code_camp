@@ -2,42 +2,43 @@
 <html>
 <head>
 	<title>Consulta Por Venezuela</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
-<body>
-	<header>
+<body class="container">
+	<header class="header">
 		<!-- creamos el header que va contener el titulo y una descripcion en un parrafo -->
-		<h1>Consulta por Venezuela</h1>
-		<p>Gracias por participar en este momento historico para nuestro País</p>
+		<h1 id="title" class="text-center">Consulta por Venezuela</h1>
+		<p id="description" class="text-center description">Gracias por participar en este momento historico para nuestro País</p>
 	</header>
 	<!-- Creamos el contenedor del formulario -->
 	<form>
 		<!-- Creamos un un contenedor div para cada input -->
-		<div>
+		<div class="form-group">
 			<!-- Etiquetamos la seccion de entrada, recordando que puede estar asociada a una acción -->
 			<label id="name-label" for="name">
 				Nombre
 			</label>
 			<!-- Colocamos la etiqueta de entrada de datos recuerda que lleva los atributos type y name que se asocian a demas elementos del documento  y lleva placeholder for default, finalmente el atributo required indica al navegador que es necesario llenarlo-->
-			<input type="text"  name="name" placeholder="Ingresa tu nombre" required="True" id="name">
+			<input type="text"  name="name" placeholder="Ingresa tu nombre" required="True" id="name" class="form-control">
 		</div>
 		<!-- otro contenedor div para la segunda entrada -->
-		<div>
+		<div class="form-group">
 			<!-- etiquetamos la seccion de entrada -->
 			<label id="email-label" for="email">
 				Email
 			</label>
 			<!-- Colocamos la etiqueta de entrada de datos -->
-			<input type="text" name="email" id="email" placeholder="Ingresa tu email" required="True">
+			<input type="text" name="email" id="email" placeholder="Ingresa tu email" required="True" class="form-control">
 		</div>
-		<div>
+		<div class="form-group">
 			<label id="number-label" for="number">Edad<span>(opcional)</span></label>
-			<input type="number" name="number" id="number" min="18" max="99" required="True" placeholder="Edad">
+			<input type="number" name="number" id="number" min="18" max="99" required="True" placeholder="Edad" class="form-control">
 		</div>
-		<div>
+		<div class="form-group">
 			<!-- Aqui tenemos una selección multiple comenzando con un parrafo -->
 			<p>¿De que región de Venezuela nos escribes?</p>
 			<!-- Aqui comienza la selección multiple -->
-			<select id="dropdown" name="regions" required="True">
+			<select id="dropdown" name="regions" required="True" class="form-control">
 				<!-- Aquí comienzan las opciones con la etiqueta <option> -->
 				<!-- La primera opcion es la que viene por defecto en el select -->
 				<option disabled="" selected="" value="">Región de Venezuela desde donde participa</option>
@@ -48,51 +49,51 @@
 				<option value="occidente">Región Occidental</option>
 			</select>
 		</div>
-		<div>
+		<div class="form-group">
 			<p>¿Quiere que Venezuela cambie su sistema político y económico?</p>
 			<!-- Colocamos la entrada input dentro de una etiqueta label de tal forma que al dar click encima esta se seleccione -->
 			<label>
 				<!-- Para dejar seleccionado por defecto colocamos el atributo checked -->
-				<input type="radio" name="user-consulted" value="Definitivamente" checked="" >
+				<input type="radio" name="user-consulted" value="Definitivamente" checked="" class="input-radio">
 				Definitivamente
 			</label>
 			<label>
-				<input type="radio" name="user-consulted" value="No-estoy-seguro" >
+				<input type="radio" name="user-consulted" value="No-estoy-seguro" class="input-radio" >
 				No estoy seguro
 			</label>
 			<label>
-				<input type="radio" name="user-consulted" value="Definitivamente-no" >
+				<input type="radio" name="user-consulted" value="Definitivamente-no" class="input-radio">
 				Definitivamente no
 			</label>
 		</div>
-		<div>
+		<div class="form-group">
 			<p>
 				¿Que áreas crees que se deberian cambiar en nuestro País? <span>Presiona todas si así te parece</span>
 			</p>
 			<!-- Colocamos todas las inputs dentro de una etiqueta label -->
 			<label>
-				<input type="checkbox" name="option" value="economia">Economía
+				<input type="checkbox" name="option" value="economia" class="input-checkbox">Economía
 			</label>
 			<label>
-				<input type="checkbox" name="option" value="educacion">Educación
+				<input type="checkbox" name="option" value="educacion" class="input-checkbox">Educación
 			</label>
 			<label>
-				<input type="checkbox" name="option" value="politica">Política
+				<input type="checkbox" name="option" value="politica" class="input-checkbox">Política
 			</label>
 			<label>
-				<input type="checkbox" name="option" value="cultura">Cultura
+				<input type="checkbox" name="option" value="cultura" class="input-checkbox">Cultura
 			</label>
 		</div>
-		<div>
+		<div class="form-group">
 			<!-- Aquí vamos a a poner un input text para los comentarios -->
 			<p>¿Que más quisieras cambiar en nuestro país?</p>
 			<!-- Aquí se usa una etiqueta que no habia utilizado hasta ahora que es la <textarea -->
-			<textarea id="comments" name="comment" placeholder="Ingresa aquí aquello que quieres cambiar en Venezuela"></textarea>
+			<textarea id="comments" name="comment" placeholder="Ingresa aquí aquello que quieres cambiar en Venezuela" class="input-text-area"></textarea>
 		</div>
 		<!-- finalmente colocamos un boton de submit para el formulario completo -->
-		<div>
+		<div class="form-group">
 			<!-- usamos la etiqueta button -->
-			<button type="submit" id="submit"> Enviar</button>
+			<button type="submit" id="submit" class="submit-button"> Enviar</button>
 		</div>
 	</form>
 </body>
