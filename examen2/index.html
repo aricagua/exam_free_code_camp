@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Consulta Por Venezuela</title>
+</head>
+<body>
+	<header>
+		<!-- creamos el header que va contener el titulo y una descripcion en un parrafo -->
+		<h1>Consulta por Venezuela</h1>
+		<p>Gracias por participar en este momento historico para nuestro País</p>
+	</header>
+	<!-- Creamos el contenedor del formulario -->
+	<form>
+		<!-- Creamos un un contenedor div para cada input -->
+		<div>
+			<!-- Etiquetamos la seccion de entrada, recordando que puede estar asociada a una acción -->
+			<label id="name-label" for="name">
+				Nombre
+			</label>
+			<!-- Colocamos la etiqueta de entrada de datos recuerda que lleva los atributos type y name que se asocian a demas elementos del documento  y lleva placeholder for default, finalmente el atributo required indica al navegador que es necesario llenarlo-->
+			<input type="text"  name="name" placeholder="Ingresa tu nombre" required="True" id="name">
+		</div>
+		<!-- otro contenedor div para la segunda entrada -->
+		<div>
+			<!-- etiquetamos la seccion de entrada -->
+			<label id="email-label" for="email">
+				Email
+			</label>
+			<!-- Colocamos la etiqueta de entrada de datos -->
+			<input type="text" name="email" id="email" placeholder="Ingresa tu email" required="True">
+		</div>
+		<div>
+			<label id="number-label" for="number">Edad<span>(opcional)</span></label>
+			<input type="number" name="number" id="number" min="18" max="99" required="True" placeholder="Edad">
+		</div>
+		<div>
+			<!-- Aqui tenemos una selección multiple comenzando con un parrafo -->
+			<p>¿De que región de Venezuela nos escribes?</p>
+			<!-- Aqui comienza la selección multiple -->
+			<select id="dropdown" name="regions" required="True">
+				<!-- Aquí comienzan las opciones con la etiqueta <option> -->
+				<!-- La primera opcion es la que viene por defecto en el select -->
+				<option disabled="" selected="" value="">Región de Venezuela desde donde participa</option>
+				<option value="andes">Los Andes</option>
+				<option value="central">Región Central</option>
+				<option value="llanos">Los Llanos</option>
+				<option value="oriente">Región Oriental</option>
+				<option value="occidente">Región Occidental</option>
+			</select>
+		</div>
+		<div>
+			<p>¿Quiere que Venezuela cambie su sistema político y económico?</p>
+			<!-- Colocamos la entrada input dentro de una etiqueta label de tal forma que al dar click encima esta se seleccione -->
+			<label>
+				<!-- Para dejar seleccionado por defecto colocamos el atributo checked -->
+				<input type="radio" name="user-consulted" value="Definitivamente" checked="" >
+				Definitivamente
+			</label>
+			<label>
+				<input type="radio" name="user-consulted" value="No-estoy-seguro" >
+				No estoy seguro
+			</label>
+			<label>
+				<input type="radio" name="user-consulted" value="Definitivamente-no" >
+				Definitivamente no
+			</label>
+		</div>
+		<div>
+			<p>
+				¿Que áreas crees que se deberian cambiar en nuestro País? <span>Presiona todas si así te parece</span>
+			</p>
+			<!-- Colocamos todas las inputs dentro de una etiqueta label -->
+			<label>
+				<input type="checkbox" name="option" value="economia">Economía
+			</label>
+			<label>
+				<input type="checkbox" name="option" value="educacion">Educación
+			</label>
+			<label>
+				<input type="checkbox" name="option" value="politica">Política
+			</label>
+			<label>
+				<input type="checkbox" name="option" value="cultura">Cultura
+			</label>
+		</div>
+		<div>
+			<!-- Aquí vamos a a poner un input text para los comentarios -->
+			<p>¿Que más quisieras cambiar en nuestro país?</p>
+			<!-- Aquí se usa una etiqueta que no habia utilizado hasta ahora que es la <textarea -->
+			<textarea id="comments" name="comment" placeholder="Ingresa aquí aquello que quieres cambiar en Venezuela"></textarea>
+		</div>
+		<!-- finalmente colocamos un boton de submit para el formulario completo -->
+		<div>
+			<!-- usamos la etiqueta button -->
+			<button type="submit" id="submit"> Enviar</button>
+		</div>
+	</form>
+</body>
+</html>
