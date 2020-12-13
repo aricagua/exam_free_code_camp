@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tutorial Basico de Sympy</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<!-- Colocamos la barra de navegación primero -->
+	<nav id="navbar">
+		<!-- El primer titulo -->
+		<header>Documentación de Sympy Básica
+		</header>
+		<!-- Primero colocamos todos los enlaces que van a ir en el nav bar -->
+		<ul>
+			<!-- Les ponemos una clase para darles estilos -->
+			<li><a href="#Introducción">Introducción</a></li>
+			<li><a href="#Que_es_la_computacion_simbolica">¿Qué es la computación simbolica?</a></li>
+			<li><a href="#Un_ejemplo_interesante">Un ejemplo interesante</a></li>
+			<li><a href="#El_poder_de_la_computacion_simbolica">El poder de la computación simbolica</a></li>
+			<li><a href="#Porque_sympy">¿Porqué Sympy?</a></li>
+			<li><img src="https://drive.google.com/uc?id=17ZBQ8WqcPVjleqhVsjckgtLxhWpTusTc"></li>
+		</ul>
+	</nav>
+	<!-- De aquí en adelante comienza la codificación  del contenido -->
+	<main id="main-doc">
+		<!-- Cabe aclarar que para cada elemento li se abrirá un  section -->
+		<section class="main-section" id="Introducción">
+			<!-- Le colocamos su respectivo titulo -->
+			<header>
+				Introducción
+			</header>
+		</section>
+		<section class="main-section" id="Que_es_la_computacion_simbolica">
+			<header>
+				¿Que es la computación simbolica?
+			</header>
+			<article>
+				<p>
+					El cálculo simbólico se ocupa del cálculo de objetos matemáticos simbólicamente. Esto significa que los objetos matemáticos se representan de manera exacta, no aproximada, y las expresiones matemáticas con variables no evaluadas se dejan en forma simbólica.
+
+				</p>
+			</article>
+		</section>
+		<section class="main-section" id="Un_ejemplo_interesante">
+			<header>Un ejemplo interesante</header>
+			<article>
+				<p>
+					Los sistemas de cálculo simbólico (que, dicho sea de paso, a menudo también se denominan sistemas de álgebra informática, o simplemente CAS) como SymPy son capaces de calcular expresiones simbólicas con variables.Como veremos más adelante, en SymPy, las variables se definen mediante símbolos. A diferencia de muchos sistemas de manipulación simbólica, las variables en SymPy deben definirse antes de que se utilicen (la razón de esto se discutirá en la siguiente sección).
+
+					Definamos una expresión simbólica, que represente la expresión matemática <span class="expression"> x + 2y</span>
+
+				</p>
+				<code>
+					>>>   from sympy import symbols
+					>>>   x, y = symbols('x y')
+					>>>   expr = x + 2*y
+					>>>   expr
+					>>>   x + 2*y
+				</code>
+			</article>
+		</section>
+		<section class="main-section" id="El_poder_de_la_computacion_simbolica">
+			<header>El poder de la computación simbolica</header>
+			<article>
+				El poder real de un sistema de cálculo simbólico como SymPy es la capacidad de realizar todo tipo de cálculos simbólicamente. SymPy puede simplificar expresiones, calcular derivadas, integrales y límites, resolver ecuaciones, trabajar con matrices y mucho, mucho más, y hacerlo todo simbólicamente. Incluye módulos para trazar, imprimir (como una salida impresa en 2D de fórmulas matemáticas o LATEX), generación de código, física, estadística, combinatoria, teoría de números, geometría, lógica y más. Aquí una lista de las diferentes funciones de Sympy:
+			</article>
+			<ul>
+				<li>
+					Obtener derivadas a partir de expresiones simbolicas.
+				</li>
+				<li>
+					Integrales definidas en indefinidas.
+				</li>
+				<li>
+					Calculo de limites.
+				</li>
+				<li>
+					Despeje de variables en una expresión algebráica.
+				</li>
+				<li>
+					Solución de ecuaciones diferenciales.
+				</li>
+				<li>
+					Operaciones con matrices.
+				</li>
+			</ul>
+		</section>
+		<section class="main-section" id="Porque_sympy">
+			<header>¿Porqué Sympy</header>
+			<article>
+				<p>
+					Hay muchos sistemas de álgebra computacional por ahí. Este artículo de Wikipedia enumera muchos de ellos. ¿Qué hace que SymPy sea una mejor opción que las alternativas?
+
+					En primer lugar, SymPy es completamente gratuito. Es de código abierto y tiene la licencia BSD liberal, por lo que puede modificar el código fuente e incluso venderlo si lo desea. Esto contrasta con sistemas comerciales populares como Maple o Mathematica que cuestan cientos de dólares en licencias.
+
+					En segundo lugar, SymPy usa Python. La mayoría de los sistemas informáticos de álgebra inventan su propio lenguaje. No SymPy. SymPy está escrito completamente en Python y se ejecuta completamente en Python. Esto significa que si ya conoce Python, es mucho más fácil comenzar con SymPy, porque ya conoce la sintaxis (y si no conoce Python, es muy fácil de aprender). Ya sabemos que Python es un lenguaje bien diseñado y probado en batalla. Los desarrolladores de SymPy confían en sus habilidades para escribir software matemático, pero el diseño de lenguajes de programación es algo completamente diferente. Al reutilizar un idioma existente, podemos centrarnos en las cosas que importan: las matemáticas.
+
+					Otro sistema de álgebra computacional, Sage también usa Python como su lenguaje. Pero Sage es grande, con una descarga de más de un gigabyte. Una ventaja de SymPy es que es liviano. Además de ser relativamente pequeño, no tiene más dependencias que Python, por lo que se puede usar fácilmente en casi cualquier lugar. Además, los objetivos de Sage y los de SymPy son diferentes. Sage tiene como objetivo ser un sistema con todas las funciones para las matemáticas, y su objetivo es hacerlo compilando todos los principales sistemas matemáticos de código abierto en uno. Cuando llama a alguna función en Sage, como integrar, llama a uno de los paquetes de código abierto que incluye. De hecho, SymPy está incluido en Sage. SymPy, por otro lado, pretende ser un sistema independiente, con todas las funciones implementadas en SymPy.
+
+					Una última característica importante de SymPy es que se puede utilizar como biblioteca. Muchos sistemas de álgebra computarizada se enfocan en ser utilizables en entornos interactivos, pero si desea automatizarlos o ampliarlos, es difícil hacerlo. Con SymPy, puede usarlo fácilmente en un entorno interactivo de Python o importarlo en su propia aplicación de Python. SymPy también proporciona API para facilitar su ampliación con sus propias funciones personalizadas.
+				</p>
+			</article>
+		</section>
+	</main>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

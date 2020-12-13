@@ -1,0 +1,249 @@
+/*PRIMERO FORMATEAMOS LOS COLORES QUE VMAOS A UTILIZAR DESDE RAIZ*/
+
+:root {
+	--color-white: #f3f3f3;
+	--color-ligth-blue: #536394;
+	--color-ligth-blue-alpha: rgb(150, 171, 232);
+	--color-yellow: #FBE032;
+}
+
+/*FORMATEAMOS DEDE RAIZ LOS MARGENES Y BOX SIZING*/
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/*RECORDAR EMPEZAR DESDE LAS ETIQUETAS MAS EXTERNAS FORMATEANDO PRIMERO EL TEXTO*/
+
+body {
+	display: flex;
+	font-family: sans-serif;
+	/*formateamos el tamaño de la fuente a 10px para usarla con rem*/
+	font-size: 10px;
+	/*especificamos el peso o grueso de la letra*/
+	font-weight: 400;
+	/*interlineado*/
+	line-height: 1.4;
+	color:var(--color-white);
+	flex-direction: column;
+	justify-content: center;
+}
+/*Al parecer a un contenedor principal no le puedo agregar estos estilos, por lo tanto se opta por 
+agregarlos antes con un pseudo-elemento before, esto es algo que hay q investigar mas, sin embargo tiene sentido*/
+/*EL contenedor no se altera en ningun momento, y solo el fondo permanece sin que se rompa, no cargamos al contenedor principal de tantos estilos*/
+/*permite hacer un fondo muy bonito*/
+/*ademas en el documento de FreeCodeCamp especifican que si queremos optimizar para dispisitvos mobiles usemos
+la propiedad background-attachment:fixed*/
+body::before {
+	/*Recordad que con position fixed los elementos se posicionan respecto a la ventana y se quedan pegados donde los posicionemos*/
+	position: fixed;
+	content: '';
+	top: 0;
+	left: 0;
+	/*esto hará que ocupe todo el ancho y el alto de la ventana*/
+	height: 100%;
+	width: 100%;
+	/*indica que estará por debajo de cualquier contenido*/
+	z-index: -1;
+	/*ponemos la imagen de fondo en conjunto con un background gradiente*/
+	background-image: linear-gradient(
+		115deg,
+		rgba(58,58,158,0.8),
+		rgba(136,136,206,0.7)
+		), url('/home/pepe/examen/examen2/images/bandera.jpeg');
+	/*indicamos que se adapte a el tamaño especificado*/
+	background-size: cover;
+	/*si hace falta espacio por rellenar no repitas*/
+	background-repeat: no-repeat;
+	/*deja la imagen centrada*/
+	background-position: center;
+}
+
+/*Como quiero centrar a H1 y al parrafo debajo solo le pongo la clase text-center a ellos*/
+
+/*Siguiendo debemos formatear desde las etiquetas principales hasta las clases*/
+
+h1 {
+	font-weight: 400;
+	line-height: 1.2;
+}
+
+p {
+	font-size: 1.125rem;
+}
+
+/*Ponemos margenes a h1 y p*/
+
+h1, p {
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+}
+
+/*empezamos a dar estilos a las etiquetas del formulario*/
+
+label {
+	display: flex;
+	/*alinear verticalmente*/
+	align-items: center;
+	font-size: 1.125rem;
+	margin-bottom: 0.25rem;
+}
+
+/*Indicamos a los demas contenedores que hereden las caracteristicas que se definieron*/
+input,
+button,
+select,
+textarea {
+	margin:0;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+/*quitamos el borde que trae el boton por defecto*/
+
+button {
+	border: none;
+}
+
+/*UNA VEZ FORMATEADAS LAS ETIQUETAS PRINCIPALES SEGUIMOS CON LAS CLASES ASIGNADAS DE AFUERA HACIA ADENTRO*/
+
+/*Aplicamos estilos al contenedor principal que viene a ser el body en este caso con la clase container*/
+
+.container {
+	width: 100%;
+	margin:3.125rem auto 0 auto;
+
+}
+
+
+.header {
+	padding: 0 0.625rem;
+	margin-bottom: 1.875rem;
+}
+
+.description {
+	font-style: italic;
+	font-weight: 200,
+	text-shadow 1px 1px 1px rgba(0,0,0,0.4);
+}
+
+/*es mala practica dar estilos directamente a las etiquetas sin embargo casi no hay tiempo*/
+
+span {
+	margin-left: 0.25rem;
+	font-size: 0.9rem;
+	color: gray;
+}
+
+/*centramos titulo y description*/
+
+.text-center {
+	text-align: center;
+}
+
+/*EMPEZAMOS CON EL CONTENEDOR DEL FORMULARIO*/
+
+form {
+	align-self: center;
+	background: var(--color-ligth-blue-alpha);
+	/*agrega transparencia al fondo*/
+	background-color: rgba(0,0,0,0.5);
+	padding: 2.5rem 0.625rem;
+	border-radius: 0.25rem;
+	max-width: 80%;
+}
+
+/*Ahora a todos los divs que esten dentro del formulario les ponemos un form-group
+para aplicar etilos que coinciden para todos ellos*/
+
+.form-group {
+	margin: 0 auto 1.25rem auto;
+	padding: 0.25rem;
+}
+
+/*Colocamos una clase a los elementos del formulario donde se especifica control*/
+
+.form-control {
+	display: block;
+	width: 100%;
+	height: 2.375rem;
+	padding: 0.375rem 0.75rem;
+	color: #495057;
+	background-color: white;
+	background-clip: padding-box;
+	border: 1px solid blue;
+	border-radius: 0.25rem;
+	transition: border-color 0.15s ease-in-out, box-shadow 0-15s ease-in-out;
+
+}
+
+
+/*hacer efecto al posarse en la entrada o en el form-control*/
+
+.form-control:focus{
+	border-color: #80bdff;
+	box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+}
+
+/*configuremos los input radio y los checkbox*/
+
+.input-radio, .input-checkbox {
+	display: inline-block;
+	margin-right: 0.625rem;
+	min-height: 1.25rem;
+	min-width: 1.25rem;
+}
+
+.input-text-area {
+	min-height: 120px;
+	width: 100%;
+	padding: 0.625rem;
+	resize: vertical;
+}
+
+.submit-button {
+	display: block;
+	width: 100%;
+
+	padding: 0.75rem;
+	background: purple;
+	color: inherit;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
